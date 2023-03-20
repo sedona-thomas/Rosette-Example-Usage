@@ -4,9 +4,15 @@ I tried using each of the types of solver aided queries and was not successful w
 
 ## Synthesize
 
+### expand_polynomial.rkt
 ![](https://github.com/sedona-thomas/Rosette-Example-Usage/blob/main/Outputs/expand_polynomial.png?raw=true)
 
+### factor_polynomial.rkt
 ![](https://github.com/sedona-thomas/Rosette-Example-Usage/blob/main/Outputs/factor_polynomial.png?raw=true)
+
+### simplify_expression.rkt
+
+Takes a messy arithmatic expression and simplifies it into `ax + b` form. It can have any combination of addition, subtraction, multiplication, and division as long as the exponent of x when expended out is 1 (no division by x).
 
 ![](https://github.com/sedona-thomas/Rosette-Example-Usage/blob/main/Outputs/simplify_expression.png?raw=true)
 
