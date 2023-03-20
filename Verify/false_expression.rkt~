@@ -1,0 +1,14 @@
+#lang rosette
+(require rosette/lib/synthax)
+
+;; example of problem that is solved by counterexample here: https://www.khanacademy.org/test-prep/praxis-math/praxis-math-lessons/praxis-math-number-and-quantity/a/gtp--praxis-math--article--counterexamples--lesson
+;; "All even numbers are multiples of 4."
+
+(define (isEven x)
+    (= 0 (modulo x 2)))
+
+(define (isMultipleOfFour x)
+    (= 0 (modulo x 4)))
+
+(define-symbolic x integer?)
+(verify (assert (= (isEven x) (isMultipleOfFour x)))))
