@@ -1,20 +1,27 @@
 # Rosette-Example-Usage
 
-I tried using each of the types of solver aided queries and was not successful with all of them, but I learned some things about Rosette. 
+I tried using each of the types of solver aided queries and was not successful with all of them, but I learned some things about Rosette while trying a few problems out. I tried a few simple problems since I already coded up someone else's example about factoring polynomials for the class presentation, and I still didn't know how each of the types of queries could be coded after researching for the presentation.
 
 ## Synthesize
-
-### expand_polynomial.rkt
-![](https://github.com/sedona-thomas/Rosette-Example-Usage/blob/main/Outputs/expand_polynomial.png?raw=true)
-
-### factor_polynomial.rkt
-![](https://github.com/sedona-thomas/Rosette-Example-Usage/blob/main/Outputs/factor_polynomial.png?raw=true)
 
 ### simplify_expression.rkt
 
 Takes a messy arithmatic expression and simplifies it into `ax + b` form. It can have any combination of addition, subtraction, multiplication, and division as long as the exponent of x when expended out is 1 (no division by x).
 
 ![](https://github.com/sedona-thomas/Rosette-Example-Usage/blob/main/Outputs/simplify_expression.png?raw=true)
+
+### factor_polynomial.rkt
+
+Example code from the class presentation. Takes a complicated polynomial and factors into terms. All you need to know is the degree of the polynomial to manually add that many terms with holes to be filled in.
+
+![](https://github.com/sedona-thomas/Rosette-Example-Usage/blob/main/Outputs/factor_polynomial.png?raw=true)
+
+### expand_polynomial.rkt
+
+Adapted from factor_polynomial.rkt to take a factored polynomial and expand it out. All you need to know is the number of terms in the factored polynomial to add that many `((* x^y (??)) (??))` terms where y is every number <= the number of terms in the fatcored polynomial. 
+
+![](https://github.com/sedona-thomas/Rosette-Example-Usage/blob/main/Outputs/expand_polynomial.png?raw=true)
+
 
 ### Failed Attempt
 
