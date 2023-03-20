@@ -6,9 +6,6 @@
     (+ (* 3 x) 10 7 8 9 x))
 
 ;; Sketch Function: simplified expression
-;; rosette cannot handle an expression with two holes (??)
-;; ex. cannot handle: "(/ (* x (??)) (??))" or "(* x (/ (??) (??)))"
-;; tried using rational numbers but it will not accept rational numbers when it expects a solvable data type
 (define (simplified-expression x) 
   (+ (* x (??)) (??)))
 
