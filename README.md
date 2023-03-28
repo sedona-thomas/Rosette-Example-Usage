@@ -36,7 +36,15 @@ I tried the following forms to see if it was an issue with the order or using tw
 
 ## Solve
 
+### solve_expression.rkt
+
+Takes an arithmatic expression and solves for `x`. Can solve for any expression that can be represented by Racket. Example expression: `3x + 2 = 5`
+
 ![](https://github.com/sedona-thomas/Rosette-Example-Usage/blob/main/Outputs/solve_expression.png?raw=true)
+
+### Failed Attempt
+
+
 
 ## Verify
 
