@@ -18,21 +18,9 @@ Example code from the class presentation. Takes a complicated polynomial and fac
 
 ### expand_polynomial.rkt
 
-Adapted from factor_polynomial.rkt to take a factored polynomial and expand it out. All you need to know is the number of terms in the factored polynomial to add that many `((* x^y (??)) (??))` terms where y is every number <= the number of terms in the fatcored polynomial. 
+Adapted from factor_polynomial.rkt to take a factored polynomial and expand it out. All you need to know is the number of terms in the factored polynomial to add that many `((* x^y (??)) (??))` terms where y is every number <= the number of terms in the fatcored polynomial.
 
 ![](https://github.com/sedona-thomas/Rosette-Example-Usage/blob/main/Outputs/expand_polynomial.png?raw=true)
-
-
-### Failed Attempt
-
-I also tried to make a program that would simplify any simple arithmatic expression into the form `(a/b) x + c`, but I learned that Rosette throws errors if you try to add multiple holes in an expression (ex. `(/ (??) (??))`. 
-
-I tried the following forms to see if it was an issue with the order or using two holes in a binary expression but none worked. I also looked up the error it threw online, and all I could find was a stackoverflow thread about the same error being thrown when there were unnecessary partheneses which didnt apply to this issue. I also tried using rational numbers rather than an `a/b` term and it threw an error about needing a solvable type.
-  ```
-  (+ (/ (* x (??)) (??)) (??))
-  (+ (* x (/ (??) (??))) (??))
-  (+ (* x (??) (/ 1 (??))) (??)))
-  ```
 
 ## Solve
 
@@ -42,9 +30,23 @@ Takes an arithmatic expression and solves for `x`. Can solve for any expression 
 
 ![](https://github.com/sedona-thomas/Rosette-Example-Usage/blob/main/Outputs/solve_expression.png?raw=true)
 
-### Failed Attempt
+## Additional Failed Attempts to Learn More About Rosette
 
-I also tried to use the example from [Growing Solver-Aided Languages with ROSETTE](https://homes.cs.washington.edu/~emina/doc/rosette.onward13.pdf) to learn more about using structs to 
+### Synthesis: Failed Attempt
+
+I also tried to make a program that would simplify any simple arithmatic expression into the form `(a/b) x + c`, but I learned that Rosette throws errors if you try to add multiple holes in an expression (ex. `(/ (??) (??))`.
+
+I tried the following forms to see if it was an issue with the order or using two holes in a binary expression but none worked. I also looked up the error it threw online, and all I could find was a stackoverflow thread about the same error being thrown when there were unnecessary partheneses which didnt apply to this issue. I also tried using rational numbers rather than an `a/b` term and it threw an error about needing a solvable type.
+
+  ```rkt
+  (+ (/ (* x (??)) (??)) (??))
+  (+ (* x (/ (??) (??))) (??))
+  (+ (* x (??) (/ 1 (??))) (??)))
+  ```
+
+### Solve: Failed Attempt
+
+I also tried to use the example from [Growing Solver-Aided Languages with ROSETTE](https://homes.cs.washington.edu/~emina/doc/rosette.onward13.pdf) to learn more about using structs with Rosette, but I was unable to get the solver to work. For the presentation, Raven and I
 
 ## Verify
 
