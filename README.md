@@ -44,7 +44,7 @@ Takes an arithmatic expression and solves for `x`. Can solve for any expression 
 
 ### Failed Attempt
 
-
+I also tried to use the example from [Growing Solver-Aided Languages with ROSETTE](https://homes.cs.washington.edu/~emina/doc/rosette.onward13.pdf) to learn more about using structs to 
 
 ## Verify
 
