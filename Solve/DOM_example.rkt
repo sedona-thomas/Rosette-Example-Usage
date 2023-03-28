@@ -29,13 +29,14 @@
 (define-symbolic z0 z1 z2 z3 z4 string?)
 (define zp (list z0 z1 z2 z3 z4))
 (evaluate zp (solve (assert (zpath? zp dom "World"))))
-
+(print-forms zp)
 
 (define-symbolic zp0 zp1 mask string?)
 (define model
   (solve
    (begin (assert (zpath? zp0 dom "World"))
           (assert (zpath? zp1 dom "Hello")))))
+(print-forms model)
 ; returns that string? is not a solvable type
 
 
