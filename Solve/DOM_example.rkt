@@ -31,12 +31,12 @@
 (evaluate zp (solve (assert (zpath? zp dom "World"))))
 (print-forms zp)
 
-(define-symbolic zp0 zp1 mask string?)
-(define model
-  (solve
-   (begin (assert (zpath? zp0 dom "World"))
-          (assert (zpath? zp1 dom "Hello")))))
-(print-forms model)
+;(define-symbolic zp0 zp1 mask string?)
+;(define model
+;  (solve
+;   (begin (assert (zpath? zp0 dom "World"))
+;          (assert (zpath? zp1 dom "Hello")))))
+;(print-forms model)
 ; returns that string? is not a solvable type
 
 
