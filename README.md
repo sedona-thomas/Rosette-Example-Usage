@@ -30,6 +30,10 @@ Takes an arithmatic expression and solves for `x`. Can solve for any expression 
 
 ![](https://github.com/sedona-thomas/Rosette-Example-Usage/blob/main/Outputs/solve_expression.png?raw=true)
 
+## Verify
+
+I tried getting verify to output a useful binding, but it seems to require you to access the verification condition (the Rosette structure that stores the values of all assertions). I tried using it like `solve` to try to output bindings for a counterexample, but it only outputted an empty model.
+
 ## Additional Failed Attempts to Learn More About Rosette
 
 ### Synthesis: Failed Attempt
@@ -46,8 +50,4 @@ I tried the following forms to see if it was an issue with the order or using tw
 
 ### Solve: Failed Attempt
 
-I also tried to use the example from [Growing Solver-Aided Languages with ROSETTE](https://homes.cs.washington.edu/~emina/doc/rosette.onward13.pdf) to learn more about using structs with Rosette, but I was unable to get the solver to work. For the presentation, Raven and I
-
-## Verify
-
-I tried getting verify to output a useful binding, but it seems to require you to access the verification condition (the Rosette structure that stores the values of all assertions). I tried using it like `solve` to try to output bindings for a counterexample, but it only outputted an empty model.
+I also tried to use the example from [Growing Solver-Aided Languages with ROSETTE](https://homes.cs.washington.edu/~emina/doc/rosette.onward13.pdf) to learn more about using structs with Rosette, but I was unable to get the solver to work. For the presentation, Raven and I 
