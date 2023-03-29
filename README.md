@@ -1,6 +1,6 @@
 # Rosette-Example-Usage
 
-I tried using each of the types of solver aided queries and was not successful with all of them, but I learned some things about Rosette while trying a few problems out. I tried a few simple problems since I already coded up someone else's example about factoring polynomials for the class presentation, and I still didn't know how each of the types of queries could be coded after researching for the presentation.
+I tried using each of the types of solver aided queries and was not successful with all of them, but I learned some things about Rosette during the process. I tried a few simple problems since I had already coded up someone else's example about factoring polynomials for the class presentation, and I still didn't know how each of the types of queries could be coded after researching for the presentation. I decided against a more complicated problem since there was still a lot of confusion using Rosette and it seemed more appropriate to try to better understand how the basic structure of Rosette works. I also included some failed attempts and what I learned from them, including an attempt to run the DOM example from the Rosette paper.
 
 ## Synthesize
 
@@ -36,7 +36,7 @@ I tried getting verify to output a useful binding, but it seems to require you t
 
 ## Additional Failed Attempts to Learn More About Rosette
 
-### Synthesis: Failed Attempt
+### Synthesis: Failed Attempt with Too Many Holes
 
 I also tried to make a program that would simplify any simple arithmatic expression into the form `(a/b) x + c`, but I learned that Rosette throws errors if you try to add multiple holes in an expression (ex. `(/ (??) (??))`.
 
@@ -48,6 +48,10 @@ I tried the following forms to see if it was an issue with the order or using tw
   (+ (* x (??) (/ 1 (??))) (??)))
   ```
 
-### Solve: Failed Attempt
+### Solve: Failed Attempt with the String Data Type
 
-I also tried to use the example from [Growing Solver-Aided Languages with ROSETTE](https://homes.cs.washington.edu/~emina/doc/rosette.onward13.pdf) to learn more about using structs with Rosette, but I was unable to get the solver to work. For the presentation, Raven and I 
+I also tried to use the example from [Growing Solver-Aided Languages with ROSETTE](https://homes.cs.washington.edu/~emina/doc/rosette.onward13.pdf) to learn more about using structs with Rosette, but I was unable to get the solver to work. For the presentation, Raven and I were still unsure exactly what was going on in the Document Object Model example for finding z-paths, so I tried to get the code snippet from the paper to run in Rosette.
+
+When I ran each of the solve/generalize code snippets from the text, they returned that `string? is not a solvable type` and that generalize is not recognized by Rosette. I tried looking through the documentation to figure out why the string type was being rejected, and it seems that string is not a "lifted" data type that can be used as a symbolic constant. It seems that when the initial paper was written, Rosette was able to handle different data types than the current version (similar to the change with verify/debug queries).
+
+The documentation also described how Racket structs are accepted by Rosette in the same form used in the example, but the examples in the documentation only contain data types explicitly listed for Rosette. It seems that the structs could require all values to be Rosette data types, but I could not find a clear answer to this in the documentation.
